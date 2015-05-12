@@ -5,56 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Allen Henson NYC</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="./style.css">
-        <link rel="stylesheet" href="./animate.css">
+        <link rel="stylesheet" href="./styles/foundation.min.css">
+
+    <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/animate.css">
 
 <link href="//vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 <script src="//vjs.zencdn.net/4.12/video.js"></script>
 <script type="text/javascript">
     setTimeout(function(){
         document.getElementById("video").play();
-    }, 2000);
+        document.getElementById("audio").play();
 
-   
+    }, 500);
+</script>
 
+<script type="text/javascript">
+    $(document).ready(function() {
+    var video = $('#video').get(0);
+    video.play();
 
-  </script>
-
-    <script type="text/javascript">
-   $("video").click( function (){
-    $(this).prop('muted', !$(this).prop('muted'));    
+    var height = $(document).height() - $(window).height();
+    
+    $(window).scroll(function() {
+        video.volume = 1 - $(window).scrollTop() / height;
+        console.log(video.volume);
     });
-   </script>
+});
+ </script>
+
+ <sc
 
 
   </head>
   <body>
+      <h1 class="animated fadeInDown" id="title">ALLEN HENSON</h1>
+        <hr class="animated  delay1">
+        <div class="skrim-top"></div> 
+
     <div id="hero-container">
 
-
-      <video id="video"  loop>
-        <source src="AHNY.mp4#t=3" type="video/mp4">
-
+      <video id="video"  loop >
+        <source src="video.mp4" type="video/mp4">
       </video>
+       <audio id="audio"  loop>
+        <source src="audio.m4a" type="audio/m4a">
+      </audio>
 
 
-    <div class="skrim"> 
-        <p class="tag animated fadeIn delay4"  >
+    <div class="skrim">  <h2 class="tag animated fadeIn delay4"  >
           WATCH MORE ON VIMEO
-        </p>
-    </div>
-
-
-    </div>
-
-        <h1 class="animated fadeInDown" id="title">ALLEN HENSON</h1>
-        <hr class="delay1">
+        </h2></div>       
 
 
 
-
-    
-
-
+      
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </body>
 </html>
